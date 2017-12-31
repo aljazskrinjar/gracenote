@@ -1,0 +1,32 @@
+body {
+  margin: 0 auto;
+}
+
+th {
+  background: blue;
+  color: white;
+  width: 200px;
+  height: 50px;
+}
+
+img {
+  width:20px;
+  height:20px;
+  padding-left: 20px;
+}
+
+article {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#outer {
+  text-align: center;
+  vertical-align: middle;
+}
+#stats{
+  line-height: 50px;
+}
+
+#stats tr:nth-child(even){background-color: #f2f2f2;}
+#stats tr:hover {background-color: #ddd;}
