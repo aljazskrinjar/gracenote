@@ -1,4 +1,10 @@
-I will add my own README as soon as possible.
+## To run the program do
+
+```bash
+git clone git@github.com:aljazskrinjar/gracenote.git
+yarn install
+yarn start
+```
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
