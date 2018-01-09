@@ -23,10 +23,6 @@ describe('<CountryStats />', () => {
   })
 
   it('renders a name of a country', () => {
-    expect(container).to.contain( data.NOCMedals.NOC.c_Name )
-  })
-
-  it('renders a name of a country', () => {
     expect(container.find('h1')).to.have.text( data.NOCMedals.NOC.c_Name )
   })
 
