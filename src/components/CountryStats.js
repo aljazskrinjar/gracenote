@@ -9,25 +9,69 @@ import '../index.css'
 
 class CountryStats extends PureComponent {
 
+
+
   renderSport(sport, index) {
     return <Sport key={index} { ...sport } />
   }
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      data: {}
+    };
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() =>
+    fetch('http://localhost:8000/src/data.json')
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            data: result
+          });
+        },
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+      , 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+}
+
   render() {
-    const data = require('../data')
+    // const data = require('../data')
 
-    return (
-    <div id="outer">
-      <h1>{ data.NOCMedals.NOC.c_Name }</h1>
+    const { error, isLoaded, data } = this.state;
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
 
-      <img src={Gold} alt="gold" /> { data.NOCMedals.Medals.n_Gold }
-      <img src={Silver} alt="silver" /> { data.NOCMedals.Medals.n_Silver }
-      <img src={Bronze} alt="bronze" /> { data.NOCMedals.Medals.n_Bronze }
-      <img src={All} alt="all" /> { data.NOCMedals.Medals.n_Total }
-      { data.SportList.map(this.renderSport) }
+      return (
+        <div id="outer">
+          <h1>{ data.NOCMedals.NOC.c_Name }</h1>
 
-    </div>
-    )
+          <img src={Gold} alt="gold" /> { data.NOCMedals.Medals.n_Gold }
+          <img src={Silver} alt="silver" /> { data.NOCMedals.Medals.n_Silver }
+          <img src={Bronze} alt="bronze" /> { data.NOCMedals.Medals.n_Bronze }
+          <img src={All} alt="all" /> { data.NOCMedals.Medals.n_Total }
+          { data.SportList.map(this.renderSport) }
+
+        </div>
+      )
+    }
   }
 }
 

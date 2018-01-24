@@ -1,27 +1,26 @@
 import React from 'react'
-import chai, { expect } from 'chai'
 import { shallow } from 'enzyme'
-import chaiEnzyme from 'chai-enzyme'
 import Participant from './Participant'
+import MedalList from './MedalList'
 
 
-chai.use(chaiEnzyme())
 
-describe('<Participant />', () => {
-
+test('A suite', function() {
   const data = require('../data')
-  const container = shallow(<Participant key = {0} { ... data.SportList[0].GoldMedalList[0] } />)
+  it('should render without throwing an error', function() {
+    const wrapper = shallow(
+        <MedalList title = {"Gold Medals"} list = { data.SportList[0].GoldMedalList }/>
+    );
+    expect(wrapper.contains(<th>Event</th>)).toBe(true);
 
-  it('it is wrapped in tr', () => {
-    expect(container).to.have.tagName('tr')
-  })
-
-  it('check if text matches', () => {
-    expect(container.find('td').at(0)).to.have.text( data.SportList[0].GoldMedalList[0].Participant.c_Participant )
-    expect(container.find('td').at(1)).to.have.text( data.SportList[0].GoldMedalList[0].Event.c_Name )
-    expect(container.find('td').at(2)).to.have.text( data.SportList[0].GoldMedalList[0].Gender.c_Name )
-  })
+    expect(wrapper.is('.MedalList')).toBe(true);
+    expect(wrapper.find('.MedalList').length).toBe(1);
+    expect(wrapper).toMatchSnapshot();
 
 
+    expect(shallow(<Participant key = {0} { ... data.SportList[0].GoldMedalList[0] } />).text()).toEqual(data.SportList[0].GoldMedalList[0].Participant.c_Participant +
+                                                                                                        data.SportList[0].GoldMedalList[0].Event.c_Name +
+                                                                                                        data.SportList[0].GoldMedalList[0].Gender.c_Name);
 
-})
+  });
+});
