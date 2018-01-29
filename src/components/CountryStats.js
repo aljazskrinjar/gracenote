@@ -42,7 +42,7 @@ class CountryStats extends PureComponent {
           });
         }
       )
-      , 5000);
+      , 1000);
   }
 
   componentWillUnmount() {
