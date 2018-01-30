@@ -18,11 +18,10 @@ describe('MedalList test', function() {
       <MedalList title = {"Gold Medals"} list = { data.SportList[0].GoldMedalList }/>
     );
     expect(wrapper).toMatchSnapshot();
-
     expect(wrapper.contains(<th>Event</th>)).toBe(true);
     expect(wrapper.is('.MedalList')).toBe(true);
     expect(wrapper.find('.MedalList').length).toBe(1);
-    // expect(wrapper.props().title).toEqual('Gold Medals');
+    expect(wrapper.instance().props.title).toEqual('Gold Medals');
   });
 });
 
@@ -35,9 +34,6 @@ describe('Participant test', function() {
       <Participant key = {0} { ... data.SportList[0].GoldMedalList[0] } />
     );
     expect(wrapper).toMatchSnapshot();
-
-
-    // expect(wrapper.contains(<th>Event</th>)).toBe(true);
     expect(wrapper.is('.rowOfTable')).toBe(true);
     expect(wrapper.find('td').length).toBe(3);
     expect(wrapper.instance().props.Participant.c_Participant).toEqual('aljaz Mulder');
@@ -47,11 +43,12 @@ describe('Participant test', function() {
 
 it('calls componentDidMount', () => {
 
-    sinon.spy(CountryStats.prototype, 'componentDidMount');
+    const stub =sinon.stub(CountryStats.prototype, 'componentDidMount').returns({state:{isLoaded: true}});
     const wrapper = mount(<CountryStats />);
     // console.log(CountryStats.prototype.componentDidMount)
-
-    expect(CountryStats.prototype.componentDidMount.calledOnce).toEqual(true);
+    clock = sinon.useFakeTimers()
+    
+    expect(stub.calledOnce).toEqual(true);
 
   });
 
