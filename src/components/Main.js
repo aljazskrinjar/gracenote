@@ -18,8 +18,8 @@ const Main = () => (
   <main>
     <Switch>
       <Route exact path='/' component={CountryStats}/>
-      console.log(data.sportList[0])
-      <Route exact path='/sport' render={()=><Sport { ... data.SportList[0]}/>} />
+      
+      <Route exact path='/sport/:key' render={()=><Sport { ... data.SportList[key]}/>} />
       
     </Switch>
   </main>

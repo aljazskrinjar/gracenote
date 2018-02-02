@@ -19,7 +19,7 @@ ShallowWrapper {
                 "n_ID": 1,
               },
               "Participant": Object {
-                "c_Participant": "aljaz Mulder",
+                "c_Participant": "bla Mulder",
                 "c_ParticipantShort": "Mulder",
                 "n_PersonID": 169302,
                 "n_TeamID": null,
@@ -220,7 +220,7 @@ ShallowWrapper {
                               }
                               Participant={
                                         Object {
-                                                  "c_Participant": "aljaz Mulder",
+                                                  "c_Participant": "bla Mulder",
                                                   "c_ParticipantShort": "Mulder",
                                                   "n_PersonID": 169302,
                                                   "n_TeamID": null,
@@ -464,7 +464,7 @@ ShallowWrapper {
                         }
                         Participant={
                                     Object {
-                                                "c_Participant": "aljaz Mulder",
+                                                "c_Participant": "bla Mulder",
                                                 "c_ParticipantShort": "Mulder",
                                                 "n_PersonID": 169302,
                                                 "n_TeamID": null,
@@ -694,7 +694,7 @@ ShallowWrapper {
                   }
                   Participant={
                                     Object {
-                                                      "c_Participant": "aljaz Mulder",
+                                                      "c_Participant": "bla Mulder",
                                                       "c_ParticipantShort": "Mulder",
                                                       "n_PersonID": 169302,
                                                       "n_TeamID": null,
@@ -961,7 +961,7 @@ ShallowWrapper {
                   "n_ID": 1,
                 },
                 "Participant": Object {
-                  "c_Participant": "aljaz Mulder",
+                  "c_Participant": "bla Mulder",
                   "c_ParticipantShort": "Mulder",
                   "n_PersonID": 169302,
                   "n_TeamID": null,
@@ -1220,7 +1220,7 @@ ShallowWrapper {
                                     }
                                     Participant={
                                                 Object {
-                                                            "c_Participant": "aljaz Mulder",
+                                                            "c_Participant": "bla Mulder",
                                                             "c_ParticipantShort": "Mulder",
                                                             "n_PersonID": 169302,
                                                             "n_TeamID": null,
@@ -1464,7 +1464,7 @@ ShallowWrapper {
                             }
                             Participant={
                                           Object {
-                                                        "c_Participant": "aljaz Mulder",
+                                                        "c_Participant": "bla Mulder",
                                                         "c_ParticipantShort": "Mulder",
                                                         "n_PersonID": 169302,
                                                         "n_TeamID": null,
@@ -1694,7 +1694,7 @@ ShallowWrapper {
                     }
                     Participant={
                                         Object {
-                                                            "c_Participant": "aljaz Mulder",
+                                                            "c_Participant": "bla Mulder",
                                                             "c_ParticipantShort": "Mulder",
                                                             "n_PersonID": 169302,
                                                             "n_TeamID": null,
@@ -1961,7 +1961,7 @@ ShallowWrapper {
                     "n_ID": 1,
                   },
                   "Participant": Object {
-                    "c_Participant": "aljaz Mulder",
+                    "c_Participant": "bla Mulder",
                     "c_ParticipantShort": "Mulder",
                     "n_PersonID": 169302,
                     "n_TeamID": null,
@@ -2209,7 +2209,7 @@ ShallowWrapper {
     }
     Participant={
         Object {
-            "c_Participant": "aljaz Mulder",
+            "c_Participant": "bla Mulder",
             "c_ParticipantShort": "Mulder",
             "n_PersonID": 169302,
             "n_TeamID": null,
@@ -2232,7 +2232,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <td>
-          aljaz Mulder
+          bla Mulder
 </td>,
         <td>
           2 x 500m
@@ -2250,10 +2250,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "aljaz Mulder",
+          "children": "bla Mulder",
         },
         "ref": null,
-        "rendered": "aljaz Mulder",
+        "rendered": "bla Mulder",
         "type": "td",
       },
       Object {
@@ -2289,7 +2289,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <td>
-            aljaz Mulder
+            bla Mulder
 </td>,
           <td>
             2 x 500m
@@ -2307,10 +2307,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "aljaz Mulder",
+            "children": "bla Mulder",
           },
           "ref": null,
-          "rendered": "aljaz Mulder",
+          "rendered": "bla Mulder",
           "type": "td",
         },
         Object {

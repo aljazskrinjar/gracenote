@@ -36,7 +36,7 @@ describe('Participant test', function() {
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.is('.rowOfTable')).toBe(true);
     expect(wrapper.find('td').length).toBe(3);
-    expect(wrapper.instance().props.Participant.c_Participant).toEqual('aljaz Mulder');
+    expect(wrapper.instance().props.Participant.c_Participant).toEqual('bla Mulder');
 
   });
 });
@@ -46,7 +46,7 @@ it('calls componentDidMount', () => {
     const stub =sinon.stub(CountryStats.prototype, 'componentDidMount').returns({state:{isLoaded: true}});
     const wrapper = mount(<CountryStats />);
     // console.log(CountryStats.prototype.componentDidMount)
-    clock = sinon.useFakeTimers()
+    //clock = sinon.useFakeTimers()
     
     expect(stub.calledOnce).toEqual(true);
 
