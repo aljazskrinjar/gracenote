@@ -33,9 +33,12 @@ describe('Participant test', function() {
     const wrapper = shallow(
       <Participant key = {0} { ... data.SportList[0].GoldMedalList[0] } />
     );
+    //console.log(wrapper.is())
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.type()).toEqual('tr')
     expect(wrapper.is('.rowOfTable')).toBe(true);
     expect(wrapper.find('td').length).toBe(3);
+    expect(wrapper.hasClass('rowOfTable')).toEqual(true);
     expect(wrapper.instance().props.Participant.c_Participant).toEqual('bla Mulder');
 
   });
